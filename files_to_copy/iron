@@ -1,0 +1,3 @@
+# Place in /bin
+cd /usr/share/iron
+./iron $1

@@ -1,0 +1,7 @@
+# put this file inside /etc/udev/rules.d/ to debug android apps on hardware
+
+# adb protocol on maguro/toro (Galaxy Nexus)
+SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", ATTR{idProduct}=="6860", MODE="0600", OWNER="evert"
+# Asus transformer
+SUBSYSTEM=="usb", ATTR{idVendor}=="0b05", ATTR{idProduct}=="4e1f", MODE="0600", OWNER="evert"
+

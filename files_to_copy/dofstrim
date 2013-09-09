@@ -1,0 +1,8 @@
+#! /bin/sh
+
+# This script runs fstrim on / /boot and /home on a weekly base if put in /etc/cron.weekly/
+# See: http://blog.neutrino.es/2013/howto-properly-activate-trim-for-your-ssd-on-linux-fstrim-lvm-and-dmcrypt/
+
+for mount in / /boot /home; do
+	fstrim $mount
+done

@@ -1,0 +1,14 @@
+
+xterm*background:	Black
+xterm*foreground:	Green
+xterm*cursorColor:	Orchid
+xterm*cursorBlink:	true
+xterm*font:		terminus-12
+xterm*cursorOnTime:	700
+xterm*cursorOffTime:	300
+xterm*saveLines:	2000000
+!xterm*color0: 		#101010
+
+!To easily copy & paste from xterm to a program using the clipboard buffer 
+!(the primary buffer is linked to the clipboard buffer(middle mouse -> Ctrl-v)
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
