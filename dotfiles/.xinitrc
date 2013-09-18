@@ -1,6 +1,9 @@
 # conky
 (conky | while read LINE; do xsetroot -name "$LINE"; done) &
 
+# set left screen rotation
+xrandr --output DVI-D-0 --rotate right
+
 # dwm
 exec dwm
 
