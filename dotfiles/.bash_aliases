@@ -22,9 +22,9 @@ alias dus='du -sh * | sort -k1,1rh'
 alias screenfetch='sh ~/Documents/.Shortcuts/ScreenFetch.sh'
 alias logcat='python ~/Documents/.Shortcuts/colored-adb-logcat/colored-adb-logcat.py'
 alias KULBackup='sh ~/Documents/.Shortcuts/KulBackup.sh'
-alias h5cc='sh /home/evert/Documents/KULeuven/NEW_2013_07_15/HDF5/hdf5-1.8.11/tools/misc/h5cc'
+#alias h5cc='sh /home/evert/Documents/KULeuven/NEW_2013_07_15/HDF5/hdf5-1.8.11/tools/misc/h5cc'
 #alias hdfview='sh /home/evert/Documents/KULeuven/NEW_2013_07_15/HDF5/hdf-java/hdf-java/bin/hdfview.sh'
-alias hdfview='cd /home/evert/Documents/KULeuven/NEW_2013_07_15/HDF5/hdf-java/hdf-java/bin; sh hdfview.sh'
+#alias hdfview='cd /home/evert/Documents/KULeuven/NEW_2013_07_15/HDF5/hdf-java/hdf-java/bin; sh hdfview.sh'
 function mkdircd() {
 	mkdir $@; 
 	cd $@;
