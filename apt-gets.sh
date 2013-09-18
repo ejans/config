@@ -8,6 +8,11 @@ sudo apt-get build-dep dwm
 
 wget http://www.srware.net/downloads/iron64.deb
 
+cd /lib/x86_64-linux-gnu/
+
+sudo apt-get install libxss1
+sudo ln -s libudev.so.0 libudev.so.1
+
 #sudo apt-get install alsa-tools ant-contrib apache2 arduino calibre conky disper eclipse eog evolution evince file-rottler \
 #firefox geany flashplugin-installer git gnumeric keepassx kpat latex-beamer mercurial mplayer nvidia-cg-toolkit nvidia-common \
 #nvidia-experimental-310 nvidia-settings-experimental-310 obconf openbox pbzip2 pcsc-tools pcscd php5 pm-utils qemu-common \
