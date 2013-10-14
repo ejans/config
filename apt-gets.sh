@@ -1,13 +1,13 @@
 #!/bin/sh
 
 # laptop
-sudo apt-get install alsa-tools conky disper eclipse eog zathura file-roller firefox geany git flashplugin-installer mercurial \
-mplayer nvidia-common nvidia-current nvidia-settings pbzip2 pm-utils rox-filer vim virtualbox wicd wicd-curses rfkill wireshark \
-xfonts-terminus* xorg lrzip
+#sudo apt-get install alsa-tools conky disper eclipse eog zathura file-roller firefox geany git flashplugin-installer mercurial \
+#mplayer nvidia-common nvidia-current nvidia-settings pbzip2 pm-utils rox-filer vim virtualbox wicd wicd-curses rfkill wireshark \
+#xfonts-terminus* xorg lrzip
 
 # desktop
-sudo apt-get install alsa-tools conky disper eclipse eog zathura file-roller firefox geany git flashplugin-installer mercurial \
-mplayer nvidia-common nvidia-current nvidia-settings pbzip2 rox-filer vim virtualbox wireshark \
+sudo apt-get install alsa-tools conky disper eog zathura file-roller firefox geany git flashplugin-installer mercurial \
+mplayer pbzip2 rox-filer vim \
 xfonts-terminus* xorg
 
 sudo apt-get build-dep dwm
@@ -39,8 +39,14 @@ sudo usermod -G vboxusers -a $USER
 
 mkdir ~/Documents/Source
 cd ~/Documents/Source
-git clone git://git.suckless.org/{dwm, dmenu, slock, tabbed}
-cp -f ~/Documents/config/* ~/Documents/Source/
+git clone git://git.suckless.org/dwm
+git clone git://git.suckless.org/dmenu
+git clone git://git.suckless.org/tabbed
+git clone git://git.suckless.org/slock
+cp -fr ~/Documents/config/dwm/* ~/Documents/Source/dwm/*
+cp -fr ~/Documents/config/dmenu/* ~/Documents/Source/dmenu/*
+cp -fr ~/Documents/config/tabbed/* ~/Documents/Source/tabbed/*
+cp -fr ~/Documents/config/slock/* ~/Documents/Source/slock/*
 
 echo done
 sleep 3
