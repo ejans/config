@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 cd ~/Documents/Source/dwm
 cp patch/dwm-6.0-smfact.diff .

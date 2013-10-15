@@ -26,4 +26,6 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-startx
+if [ -z "$DISPLAY" ] && [ $(tty) == /dev/tty1 ]; then
+    startx
+fi

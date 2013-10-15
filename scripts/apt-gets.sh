@@ -5,7 +5,7 @@ sudo apt-get install alsa-tools conky vim xfonts-terminus* xorg -y
 
 # media stuff
 sudo apt-get install eog zathura rox-filer firefox geany flashplugin-installer \
-mplayer unetbootin thunderbird keepassx -y
+mplayer unetbootin thunderbird keepassx youtube-dl -y
 
 #power
 sudo apt-get install disper pm-utils -y
@@ -47,10 +47,10 @@ git clone git://git.suckless.org/dwm
 git clone git://git.suckless.org/dmenu
 git clone git://git.suckless.org/tabbed
 git clone git://git.suckless.org/slock
-cp -frv ~/Documents/config/dwm/* ~/Documents/Source/dwm/*
-cp -frv ~/Documents/config/dmenu/* ~/Documents/Source/dmenu/*
-cp -frv ~/Documents/config/tabbed/* ~/Documents/Source/tabbed/*
-cp -frv ~/Documents/config/slock/* ~/Documents/Source/slock/*
+cp -frv ~/Documents/config/dwm/* ~/Documents/Source/dwm/
+cp -frv ~/Documents/config/dmenu/* ~/Documents/Source/dmenu/
+cp -frv ~/Documents/config/tabbed/* ~/Documents/Source/tabbed/
+cp -frv ~/Documents/config/slock/* ~/Documents/Source/slock/
 
 # Copy files
 cd ~/Documents/config
@@ -62,7 +62,8 @@ sudo cp -frv xorg.conf /etc/X11/
 sudo cp -frv iron /bin/
 sudo cp -frv failsafe.conf /etc/init/
 
+cd ~/Documents/config/scripts/
 ./MakeAll.sh
 
 echo done!
-sleep 3
+sleep 5
