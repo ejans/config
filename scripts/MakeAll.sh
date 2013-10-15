@@ -1,7 +1,9 @@
+#!bin/bash
 
 cd ~/Documents/Source/dwm
 cp patch/dwm-6.0-smfact.diff .
 git apply dwm-6.0-smfact.diff
+rm dwm-6.0-smfact.diff
 make
 cd ../dmenu
 make
