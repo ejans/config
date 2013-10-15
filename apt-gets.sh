@@ -1,14 +1,15 @@
 #!/bin/sh
 
 # laptop
-#sudo apt-get install alsa-tools conky disper eclipse eog zathura file-roller firefox geany git flashplugin-installer mercurial \
-#mplayer nvidia-common nvidia-current nvidia-settings pbzip2 pm-utils rox-filer vim virtualbox wicd wicd-curses rfkill wireshark \
-#xfonts-terminus* xorg lrzip
+sudo apt-get install alsa-tools conky disper eclipse eog zathura file-roller firefox geany git flashplugin-installer mercurial \
+mplayer nvidia-common nvidia-current nvidia-settings pbzip2 pm-utils rox-filer vim virtualbox wicd wicd-curses rfkill wireshark \
+xfonts-terminus* xorg lrzip
 
 # desktop
-sudo apt-get install alsa-tools conky disper eog zathura file-roller firefox geany git flashplugin-installer mercurial \
-mplayer pbzip2 rox-filer vim \
+sudo apt-get install alsa-tools conky disper eclipse eog zathura file-roller firefox geany git flashplugin-installer mercurial \
+mplayer nvidia-common nvidia-current nvidia-settings pbzip2 rox-filer vim virtualbox wireshark \
 xfonts-terminus* xorg
+
 
 sudo apt-get build-dep dwm
 
@@ -19,6 +20,8 @@ cd /lib/x86_64-linux-gnu/
 
 sudo apt-get install libxss1
 sudo ln -s libudev.so.0 libudev.so.1
+
+sudo dpkg -i iron64.deb
 
 # Iron dependents
 #sudo apt-get install libxss1
@@ -47,6 +50,9 @@ cp -fr ~/Documents/config/dwm/* ~/Documents/Source/dwm/*
 cp -fr ~/Documents/config/dmenu/* ~/Documents/Source/dmenu/*
 cp -fr ~/Documents/config/tabbed/* ~/Documents/Source/tabbed/*
 cp -fr ~/Documents/config/slock/* ~/Documents/Source/slock/*
+
+cp dotfiles/.* ~/
+./MakeAll.sh
 
 echo done
 sleep 3
