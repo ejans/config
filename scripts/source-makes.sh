@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Make source
 cd ~/Documents/Source/dwm
 cp patch/dwm-6.0-smfact.diff .
 git apply dwm-6.0-smfact.diff
