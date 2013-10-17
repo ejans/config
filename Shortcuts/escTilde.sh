@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # swap Escape/grave only
 
 xmodmap -e "keycode 9 = grave"

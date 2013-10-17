@@ -13,13 +13,16 @@ sudo apt-get install disper pm-utils -y
 # laptop
 sudo apt-get install wicd wicd-curses rfkill pcsc-tools pcscd -y
 
-# programming
-sudo apt-get install eclipse mercurial make cmake cmake-curses-gui subversion \
-mercurial virtualbox wireshark texlive texlive-latex3 latex-beamer apache2 gcc \
-g++ ant -y
+# programming1
+sudo apt-get install mercurial make cmake cmake-curses-gui subversion \
+mercurial gcc g++ ant -y
+
+# programming2
+sudo apt-get install eclipse virtualbox wireshark texlive texlive-latex3 \
+latex-beamer apache2 -y
 
 # nvidia
 sudo apt-get install nvidia-common nvidia-current nvidia-settings -y
 
 # zips
-sudo apt-get install pbzip2 file-roller lrzip -y
+sudo apt-get install unzip pbzip2 file-roller lrzip -y

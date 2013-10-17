@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #cp_p()
 #{
    strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \

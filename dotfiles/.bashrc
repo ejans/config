@@ -126,5 +126,8 @@ export CLASSPATH=/usr/share/java/ant-contrib.jar:$CLASSPATH
 # set bash to vi mode
 set -o vi
 
+# enable globstar
+shopt -s globstar
+
 # set kul path variable 
 export KUL=/home/evert/Documents/KULeuven/NEW_2013_07_15
