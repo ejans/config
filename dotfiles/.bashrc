@@ -106,28 +106,24 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# switch escape with tilde
-#xmodmap -e ~/Documents/.Shortcuts/qwertyCustom
-xkbcomp ~/Documents/.Shortcuts/output.xkb $DISPLAY -w 0
-#source /opt/ros/fuerte/setup.bash
-#source /home/evert/fuerte_workspace/setup.bash
-# to use adb
-export PATH=/home/evert/Programs/android-sdk-linux/platform-tools:$PATH
-# to use android and emulate
-export PATH=/home/evert/Programs/android-sdk-linux/tools:$PATH
-# to use looci
-#export LOOCI=/home/evert/Documents/KULeuven/OLD/Looci/V2/looci
-export LOOCI=/home/evert/Documents/KULeuven/NEW_2013_07_15/Looci/V2/looci
-
-# to reset classpath
-export CLASSPATH=""
-export CLASSPATH=/usr/share/java/ant-contrib.jar:$CLASSPATH
-
 # set bash to vi mode
 set -o vi
 
 # enable globstar
 shopt -s globstar
 
+# to use adb
+#export PATH=/home/evert/Programs/android-sdk-linux/platform-tools:$PATH
+
+# to use android and emulate
+#export PATH=/home/evert/Programs/android-sdk-linux/tools:$PATH
+
+# to use looci
+#export LOOCI=/home/evert/Documents/KULeuven/looci/V2/looci
+
+# to reset classpath
+#export CLASSPATH=""
+#export CLASSPATH=/usr/share/java/ant-contrib.jar:$CLASSPATH
+
 # set kul path variable 
-export KUL=/home/evert/Documents/KULeuven/NEW_2013_07_15
+#export KUL=/home/evert/Documents/KULeuven

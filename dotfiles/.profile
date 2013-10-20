@@ -16,11 +16,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set xmodmaps
-#xmodmap ~/Documents/.Shortcuts/qwertyCustom
-
-# remove output.xkm
-rm $HOME/output.xkm
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"

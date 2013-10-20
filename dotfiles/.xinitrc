@@ -14,6 +14,3 @@ exec dwm
 if [ -f $HOME/.Xmodmap ]; then
     /usr/bin/xmodmap $HOME/.Xmodmap
 fi
-
-# set keyboard
-#xkbcomp ~/Documents/.Shortcuts/output.xkb $DISPLAY
