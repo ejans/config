@@ -18,6 +18,7 @@ tmpfs	/var/spool	tmpfs	defaults,noatime,mode=1777	0	0
 tmpfs	/var/tmp	tmpfs	defaults,noatime,mode=1777	0	0
 tmpfs	/var/log	tmpfs	defaults,noatime,mode=0755	0	0
 tmpfs	/var/log/apt	tmpfs	defaults,noatime		0	0
+tmpfs	/var/log/apache2	tmpfs	defaults,noatime	0	0
 ```
 
-The script `copy-files.sh` puts the trim script inside cron.daily.
+The `fstrim` command is not necessary because we use discard.

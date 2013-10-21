@@ -10,5 +10,5 @@ sudo cp -frv xorg.conf /etc/X11/
 sudo cp -frv iron /bin/
 sudo cp -frv failsafe.conf /etc/init/
 sudo cp -frv us /usr/share/X11/xkb/symbols/
-sudo cp -frv trim /etc/cron.daily/
-sudo chmod +x /etc/cron.daily/trim
+#sudo cp -frv trim /etc/cron.daily/
+#sudo chmod +x /etc/cron.daily/trim
