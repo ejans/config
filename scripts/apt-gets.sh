@@ -15,7 +15,7 @@ sudo apt-get install wicd wicd-curses rfkill pcsc-tools pcscd -y
 
 # programming1
 sudo apt-get install mercurial make cmake cmake-curses-gui subversion \
-mercurial gcc g++ ant -y
+mercurial gcc g++ ant rlwrap -y
 
 # programming2
 sudo apt-get install eclipse virtualbox wireshark texlive texlive-latex3 \
