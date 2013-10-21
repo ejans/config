@@ -199,6 +199,8 @@ xkb_symbols "intl" {
     key <AB10> { [     slash,   question,  questiondown,        dead_hook ] };
     key <BKSL> { [ backslash,        bar,       notsign,        brokenbar ] };
 
+    modifier_map Control { <CAPS> };
+
     include "level3(ralt_switch)"
 };
 
