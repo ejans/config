@@ -18,6 +18,7 @@ alias dus='du -sh * | sort -k1,1rh'
 alias screenfetch='bash ~/Documents/.Shortcuts/screenFetch.sh'
 alias logcat='python ~/Documents/.Shortcuts/colored-adb-logcat/colored-adb-logcat.py'
 alias KULBackup='bash ~/Documents/.Shortcuts/kulBackup.sh'
+alias wiki='bash ~/Documents.Shortcuts/wikisole.sh'
 function mkdircd() {
 	mkdir $@; 
 	cd $@;
