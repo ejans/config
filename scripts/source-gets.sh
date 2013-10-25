@@ -12,3 +12,6 @@ cp -frv ~/Documents/config/dwm/* ~/Documents/Source/dwm/
 cp -frv ~/Documents/config/dmenu/* ~/Documents/Source/dmenu/
 cp -frv ~/Documents/config/tabbed/* ~/Documents/Source/tabbed/
 cp -frv ~/Documents/config/slock/* ~/Documents/Source/slock/
+
+# Get zpaq source
+git clone https://github.com/zpaq/zpaq.git
