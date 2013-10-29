@@ -27,4 +27,3 @@ cd ..
 # Make zpaq
 cd zpaq
 make
-make install
