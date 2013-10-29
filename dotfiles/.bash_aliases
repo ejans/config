@@ -20,7 +20,6 @@ alias logcat='python ~/Documents/.Shortcuts/colored-adb-logcat/colored-adb-logca
 alias KULBackup='bash ~/Documents/.Shortcuts/kulBackup.sh'
 alias wiki='bash ~/Documents/.Shortcuts/wikisole.sh'
 alias startup='~/Documents/.Shortcuts/startup.sh'
-alias zpaq='~/Documents/Source/zpaq/zpaq $1'
 function mkdircd() {
 	mkdir $@; 
 	cd $@;
