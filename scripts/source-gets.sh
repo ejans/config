@@ -14,4 +14,7 @@ cp -frv ~/Documents/config/tabbed/* ~/Documents/Source/tabbed/
 cp -frv ~/Documents/config/slock/* ~/Documents/Source/slock/
 
 # Get zpaq source
-git clone https://github.com/zpaq/zpaq.git
+#git clone https://github.com/zpaq/zpaq.git
+git clone https://github.com/nemequ/zpaq
+cd zpaq
+make

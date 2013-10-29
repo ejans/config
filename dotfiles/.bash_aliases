@@ -12,13 +12,15 @@ alias vcp='vcp -R'
 alias killall='killall -9'
 alias tarp='tar -I pbzip2 $1 $2 $3'
 alias KUL='cd $KUL'
-alias mount='sudo mount'
+alias mount='sudo mount -o umask=0'
 alias umount='sudo umount'
 alias dus='du -sh * | sort -k1,1rh'
 alias screenfetch='bash ~/Documents/.Shortcuts/screenFetch.sh'
 alias logcat='python ~/Documents/.Shortcuts/colored-adb-logcat/colored-adb-logcat.py'
 alias KULBackup='bash ~/Documents/.Shortcuts/kulBackup.sh'
-alias wiki='bash ~/Documents.Shortcuts/wikisole.sh'
+alias wiki='bash ~/Documents/.Shortcuts/wikisole.sh'
+alias startup='~/Documents/.Shortcuts/startup.sh'
+alias zpaq='~/Documents/Source/zpaq/zpaq $1'
 function mkdircd() {
 	mkdir $@; 
 	cd $@;
