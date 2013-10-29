@@ -26,5 +26,5 @@ cd ..
 
 # Make zpaq
 cd zpaq
-sudo ./install.sh
-
+make
+make install
