@@ -1,0 +1,19 @@
+name = Eduroam UW
+author = Steven She
+version = 1
+require username *Username password *Password
+-----
+ctrl_interface=/var/run/wpa_supplicant
+network={
+    ssid="$_ESSID"
+    scan_ssid="$_SCAN"
+    proto=RSN
+    key_mgmt=WPA-EAP
+    pairwise=CCMP
+    group=CCMP
+    eap=PEAP
+    identity="$_USERNAME"
+    password="$_PASSWORD"
+    ca_cert="/usr/share/ca-certificates/mozilla/AddTrust_External_Root.crt"
+    phase2="auth=MSCHAPV2"
+}
