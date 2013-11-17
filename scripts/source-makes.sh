@@ -25,5 +25,6 @@ sudo make install
 cd ..
 
 # Make zpaq
-cd zpaq
-make
+# -> zpaq is made in source-gets.sh
+#cd zpaq
+#make
