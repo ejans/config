@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # basic
-sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg -y
+sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg xsel -y
 
 # media stuff
 sudo apt-get install eog zathura rox-filer firefox geany flashplugin-installer \
