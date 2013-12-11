@@ -12,8 +12,8 @@ cd files_to_copy/
 sudo cp -frv xorg.conf /etc/X11/
 
 # Copy binary links/files
-sudo cp -frv iron /usr/bin/
-sudo cp -frv ~/Documents/Source/zpaq/zpaq /usr/bin
+sudo cp -frv iron /usr/local/bin/
+sudo cp -frv ~/Documents/Source/zpaq/zpaq /usr/local/bin
 
 # Replace original failsafe to shorten boot time
 sudo cp -frv failsafe.conf /etc/init/
