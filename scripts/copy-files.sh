@@ -3,6 +3,8 @@
 # Copy dotfiles, screenfetch and shortcuts folders
 cd ~/Documents/config
 cp dotfiles/.* ~/
+sudo rm -fv ~/.viminfo
+touch ~/.viminfo
 cp -frv screenfetch ~/Documents/Source/
 cp -frv shortcuts/ ~/Documents/.Shortcuts/
 
@@ -12,7 +14,6 @@ cd files_to_copy/
 sudo cp -frv xorg.conf /etc/X11/
 
 # Copy binary links/files
-sudo cp -frv iron /usr/local/bin/
 sudo cp -frv ~/Documents/Source/zpaq/zpaq /usr/local/bin
 
 # Replace original failsafe to shorten boot time

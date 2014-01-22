@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ./apt-gets.sh
-./iron-gets.sh
 ./add-users.sh
 ./source-gets.sh
 ./copy-files.sh

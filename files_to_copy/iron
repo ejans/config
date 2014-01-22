@@ -1,3 +1,0 @@
-# Place in /bin
-cd /usr/share/iron
-./iron --disk-cache-dir="/var/tmp" $1
