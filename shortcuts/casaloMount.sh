@@ -1,17 +1,10 @@
 #!/bin/bash
 
-#sudo mount -t smbfs -o username=casalo,password=$mypass //casalopc/Series /media/casalopc/Series
-#sudo mount -t smbfs -o username=casalo,password=$mypass //casalopc/Movies /media/casalopc/Movies
-#sudo mount -t smbfs -o username=casalo,password=$mypass //casalopc/Temp /media/casalopc/Temp
-#sudo mount -t smbfs -o username=casalo,password=$mypass //casalopc/Music /media/casalopc/Music
-#sudo mount -t smbfs -o username=casalo,password=$mypass //casalopc/Downloads /media/casalopc/Downloads
- 
 read -s -p "Enter Password: " mypass
 
 #echo "$mypass"
-
-sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/Series /media/casalopc/Series
-sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/Movies /media/casalopc/Movies
-sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/Temp /media/casalopc/Temp
-sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/Music /media/casalopc/Music
-sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/Downloads /media/casalopc/Downloads
+sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/multimedia/series /media/casalopc/series
+sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/multimedia/movies /media/casalopc/movies
+sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/multimedia/temp /media/casalopc/temp
+sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/multimedia/music /media/casalopc/music
+sudo mount -t cifs -o username=casalo,password=$mypass //192.168.1.100/multimedia/downloads /media/casalopc/downloads

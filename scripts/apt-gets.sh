@@ -22,7 +22,7 @@ sudo apt-get install eclipse virtualbox wireshark texlive texlive-latex3 \
 latex-beamer apache2 -y
 
 # nvidia
-sudo apt-get install nvidia-common nvidia-current nvidia-settings -y
+sudo apt-get install nvidia-common nvidia-current nvidia-settings libvdpau1 -y
 
 # zips
 sudo apt-get install unzip pbzip2 file-roller lrzip -y

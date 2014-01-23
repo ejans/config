@@ -3,6 +3,7 @@
 # Copy dotfiles, screenfetch and shortcuts folders
 cd ~/Documents/config
 cp dotfiles/.* ~/
+# give .viminfo right user to use previous mark position
 sudo rm -fv ~/.viminfo
 touch ~/.viminfo
 cp -frv screenfetch ~/Documents/Source/
