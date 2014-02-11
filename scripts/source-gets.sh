@@ -18,3 +18,10 @@ cp -frv ~/Documents/config/slock/* ~/Documents/Source/slock/
 git clone https://github.com/nemequ/zpaq
 cd zpaq
 make
+
+# Get screenfetch
+cd ~/Documents/Source
+git clone https://github.com/KittyKat/screenFetch screenfetch
+
+# Get colored-adb-logcat
+git clone https://github.com/haonan/colored-adb-logcat
