@@ -3,11 +3,10 @@
 /* appearance */
 //static const char font[]        = "-*-*-medium-*-*-*-14-*-*-*-*-*-*-*";
 static const char font[]        = "-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
-static const char normbgcolor[] = "#222222";
-static const char normfgcolor[] = "#cccccc";
-static const char selbgcolor[]  = "#555555";
-//static const char selbgcolor[]  = "#772200";
-static const char selfgcolor[]  = "#ffffff";
+static const char* normbgcolor  = "#222222";
+static const char* normfgcolor  = "#cccccc";
+static const char* selbgcolor   = "#555555";
+static const char* selfgcolor   = "#ffffff";
 static const char before[]      = "<";
 static const char after[]       = ">";
 static const int  tabwidth      = 200;
@@ -21,11 +20,20 @@ static const Bool foreground    = True;
 static int  newposition   = 0;
 static Bool npisrelative  = False;
 
+#define SETPROP(p) { \
+	.v = (char *[]){ "/bin/sh", "-c", \
+		"prop=\"`xwininfo -children -id $1 | grep '^     0x' | sed -e's@^ *\\(0x[0-9a-f]*\\) \"\\([^\"]*\\)\".*@\\1 \\2@' | xargs -0 printf %b | dmenu -l 10`\" &&" \
+		"xprop -id $1 -f $0 8s -set $0 \"$prop\"", \
+		p, winid, NULL \
+	} \
+}
+
 #define MODKEY ControlMask
 static Key keys[] = { \
 	/* modifier                     key        function        argument */
 	{ MODKEY|ShiftMask,             XK_Return, focusonce,      { 0 } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          { 0 } },
+	{ MODKEY,                       XK_t,      spawn,          SETPROP("_TABBED_SELECT_TAB") },
 
 	{ MODKEY|ShiftMask,             XK_k,      rotate,         { .i = +1 } },
 	{ MODKEY|ShiftMask,             XK_j,      rotate,         { .i = -1 } },
