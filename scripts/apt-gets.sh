@@ -25,4 +25,4 @@ latex-beamer apache2 -y
 sudo apt-get install nvidia-common nvidia-current nvidia-settings libvdpau1 -y
 
 # zips
-sudo apt-get install unzip pbzip2 file-roller lrzip -y
+sudo apt-get install unzip pbzip2 file-roller -y

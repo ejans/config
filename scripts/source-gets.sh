@@ -19,6 +19,15 @@ git clone https://github.com/nemequ/zpaq
 cd zpaq
 make
 
+# Get lrzip source
+sudo apt-get install libbz2-dev liblzo2-dev
+cd ..
+git clone https://github.com/ckolivas/lrzip
+cd lrzip
+./autogen.sh
+make
+sudo make install
+
 # Get screenfetch
 cd ~/Documents/Source
 git clone https://github.com/KittyKat/screenFetch screenfetch
