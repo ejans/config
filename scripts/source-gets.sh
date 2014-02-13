@@ -30,7 +30,7 @@ sudo make install
 
 # Get screenfetch
 cd ~/Documents/Source
-git clone https://github.com/KittyKat/screenFetch screenfetch
+git clone https://github.com/KittyKatt/screenFetch screenfetch
 
 # Get colored-adb-logcat
 git clone https://github.com/haonan/colored-adb-logcat
