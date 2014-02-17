@@ -5,3 +5,7 @@
 	helper = cache --timeout=7200
 [core]
 	editor = vi
+[color]
+	diff = auto
+	status = auto
+	branch = auto
