@@ -34,3 +34,12 @@ git clone https://github.com/KittyKatt/screenFetch screenfetch
 
 # Get colored-adb-logcat
 git clone https://github.com/haonan/colored-adb-logcat
+
+# Get discount (markdown)
+git clone https://github.com/Orc/discount
+cd discount
+./configure.sh
+make
+sudo make install
+
+cd ..

@@ -6,6 +6,8 @@ sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg xsel 
 # media stuff
 sudo apt-get install eog zathura rox-filer firefox geany flashplugin-installer \
 mplayer unetbootin thunderbird keepassx youtube-dl -y
+# cmus a foobar2000 style player
+sudo apt-get --no-install-recommends install cmus cmus-plugin-ffmpeg -y
 
 #power
 sudo apt-get install disper pm-utils -y
@@ -19,7 +21,7 @@ mercurial gcc g++ ant rlwrap -y
 
 # programming2
 sudo apt-get install eclipse virtualbox wireshark texlive texlive-latex3 \
-latex-beamer apache2 -y
+latex-beamer apache2 pandoc latexmk -y
 
 # nvidia
 sudo apt-get install nvidia-common nvidia-current nvidia-settings libvdpau1 -y
