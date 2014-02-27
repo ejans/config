@@ -35,6 +35,7 @@ fi
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
+    xterm) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -113,17 +114,18 @@ set -o vi
 shopt -s globstar
 
 # to use adb
-#export PATH=/home/evert/Programs/android-sdk-linux/platform-tools:$PATH
+#export PATH=$(HOME)/Programs/android-sdk-linux/platform-tools:$PATH
+#export PATH=$HOME/Programs/adt-bundle-linux-x86_64-20131030/sdk/platform-tools:$PATH
 
 # to use android and emulate
-#export PATH=/home/evert/Programs/android-sdk-linux/tools:$PATH
+#export PATH=$HOME/Programs/android-sdk-linux/tools:$PATH
 
 # to use looci
-#export LOOCI=/home/evert/Documents/KULeuven/looci/V2/looci
+#export LOOCI=$HOME/Documents/KULeuven/looci/V2/looci
 
 # to reset classpath
 #export CLASSPATH=""
 #export CLASSPATH=/usr/share/java/ant-contrib.jar:$CLASSPATH
 
 # set kul path variable 
-#export KUL=/home/evert/Documents/KULeuven
+#export KUL=$HOME/Documents/KULeuven
