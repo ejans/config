@@ -1,3 +1,4 @@
+#~/.bash_aliases
 alias clean='sudo apt-get autoclean; sudo apt-get autoremove'
 alias update='sudo apt-get update; sudo apt-get upgrade -y; sudo youtube-dl -U'
 alias minecraft='java -jar ~/Programs/Games/Minecraft/Minecraft.jar'
@@ -16,11 +17,7 @@ alias mount='sudo mount -o umask=0'
 alias umount='sudo umount'
 alias dus='du -sh * | sort -k1,1rh'
 alias screenfetch='bash ~/Documents/.Shortcuts/screenFetch.sh'
-alias logcat='python ~/Documents/.Shortcuts/colored-adb-logcat.sh'
+alias logcat='python ~/Documents/.Shortcuts/colored-adb-logcat/colored-adb-logcat.py'
 alias KULBackup='bash ~/Documents/.Shortcuts/kulBackup.sh'
 alias wiki='bash ~/Documents/.Shortcuts/wikisole.sh'
-alias startup='~/Documents/.Shortcuts/startup.sh'
-function mkdircd() {
-	mkdir $@; 
-	cd $@;
-}
+alias startup='/home/evert/Documents/.Shortcuts/startup.sh'
