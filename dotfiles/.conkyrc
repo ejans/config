@@ -4,17 +4,10 @@ background no
 update_interval 2
 total_run_times 0
 use_spacer none
+# indicate up when having a link
+if_up_strictness link
 
 TEXT
-#$mpd_smart :: ${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}% ${loadavg 1} ${loadavg 2 3} :: ${acpitemp}c :: $memperc% ($mem) :: ${downspeed eth0}K/s ${upspeed eth0}K/s :: ${time %a %b %d %I:%M}
 
-# Laptop
 #wlan
-#${battery_short} - ${battery_time} :: ${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}% :: $memperc% ($mem) :: dwn: ${downspeed wlan0} up: ${upspeed wlan0} :: ${time %a %b %d %H:%M}
-
-#eth0
-#${battery_short} - ${battery_time} :: ${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}% :: $memperc% ($mem) :: dwn: ${downspeed eth0} up: ${upspeed eth0} :: ${time %a %b %d %H:%M}
-
-# Desktop
-#p2p1
-${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}% :: $memperc% ($mem) :: dwn: ${downspeed p2p1} up: ${upspeed p2p1} :: ${time %a %b %d %H:%M}
+${battery_short} - ${battery_time} :: ${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}% :: $memperc% ($mem) :: dwn: ${if_up wlan0}${downspeed wlan0} up: ${upspeed wlan0}${else}${downspeed eth0} up: $upspeed eth0}${endif} :: ${time %a %b %d %H:%M}

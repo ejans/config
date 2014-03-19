@@ -21,3 +21,4 @@ alias logcat='python ~/Documents/.Shortcuts/colored-adb-logcat/colored-adb-logca
 alias KULBackup='bash ~/Documents/.Shortcuts/kulBackup.sh'
 alias wiki='bash ~/Documents/.Shortcuts/wikisole.sh'
 alias startup='/home/evert/Documents/.Shortcuts/startup.sh'
+alias make='colormake'
