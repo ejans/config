@@ -10,4 +10,4 @@ if_up_strictness link
 TEXT
 
 #wlan
-${battery_short} - ${battery_time} :: ${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}% :: $memperc% ($mem) :: dwn: ${if_up wlan0}${downspeed wlan0} up: ${upspeed wlan0}${else}${downspeed eth0} up: $upspeed eth0}${endif} :: ${time %a %b %d %H:%M}
+${battery_short} - ${battery_time} :: ${cpu cpu1}% / ${cpu cpu2}% / ${cpu cpu3}% / ${cpu cpu4}% :: $memperc% ($mem) ::${if_up wlan0} W dwn: ${downspeed wlan0} up: ${upspeed wlan0}${else} C dwn: ${downspeed eth0} up: ${upspeed eth0}${endif} :: ${time %a %b %d %H:%M}
