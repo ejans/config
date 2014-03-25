@@ -1,22 +1,15 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-//static const char font[]            = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
-static const char font[]            ="-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
-static const char font2[]           = "terminus-12";
-//static const char font2[]           ="monospace-11";
-static const char info[]            = "-bg";
-static const char info2[]           = "black";
-static const char info3[]           = "-fg";
-static const char info4[]           = "green";
-static const char info5[]           = "tabbed";
-static const char info6[]           = "-c";
-static const char info7[]           = "uxterm";
-static const char info8[]           = "-into";
-static const char info9[]           = "-fn";
-static const char info10[]          = "terminus-12";
-static const char info11[]          = "iron";
-static const char info12[]	    = "slock";
+static const char font[]           ="-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
+static const char ter1[]           = "tabbed";
+static const char ter2[]           = "-c";
+static const char ter3[]           = "uxterm";
+static const char ter4[]           = "-into";
+static const char brow1[]          = "firefox";
+static const char slock1[]         = "slock";
+static const char keep1[]         = "keepassx";
+
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
@@ -42,9 +35,13 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
+	{ "Inkscape",     NULL,       NULL,       0,            True,        -1 },
 	{ "Firefox",  NULL,       NULL,       0,            False,       -1 },
 	{ "Keepassx", NULL,       NULL,       0,            True,        -1 },
-	{ "Thunderbird", NULL,    NULL,       1 << 5,       False,       -1 },
+	/* laptop */
+	//{ "Thunderbird", NULL,    NULL,       1 << 5,       False,       -1 },
+	/* desktop */
+	{ "Thunderbird", NULL,    NULL,       1 << 3,       False,       -1 },
 };
 
 /* layout(s) */
@@ -74,11 +71,10 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-//static const char *termcmd[]  = { "uxterm", "-fn", font2, info, info2, info3, info4,  NULL };
-//static const char *termcmd[] = { info5, info6, info7, info, info2, info3, info4, info9, info10, info8, NULL };
-static const char *termcmd[] = { info5, info6, info7, info8, NULL };
-static const char *browsercmd[] = { info11, NULL };
-static const char *slockcmd[] = { info12, NULL };
+static const char *termcmd[] = { ter1, ter2, ter3, ter4, NULL };
+static const char *browsercmd[] = { brow1, NULL };
+static const char *slockcmd[] = { slock1, NULL };
+static const char *keepasscmd[] = { keep1, NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -86,6 +82,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,		XK_l,      spawn,	   {.v = slockcmd } },
+	{ MODKEY|ShiftMask,		XK_k,      spawn,	   {.v = keepasscmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

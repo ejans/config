@@ -12,6 +12,22 @@ cd ../slock
 make
 cd ../tabbed
 make
+cd ../dunst
+make
+
+# Make lrzip
+cd ../lrzip
+./autogen.sh
+make
+
+# Make zpaq
+cd ../zpaq
+make
+
+# Make discount
+cd ../discount
+./configure.sh
+make
 
 # Install dwm
 cd ../dwm
@@ -22,9 +38,19 @@ cd ../dmenu
 sudo make install
 cd ../tabbed
 sudo make install
+cd ../dunst
+sudo make install
 cd ..
 
-# Make zpaq
-# -> zpaq is made in source-gets.sh
-#cd zpaq
-#make
+# Install lrzip
+cd lrzip
+sudo make install
+
+# Install zpaq
+cd ../zpaq
+sudo make install
+
+# Install discount
+cd ../discount
+sudo make install
+cd ..
