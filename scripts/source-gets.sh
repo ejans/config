@@ -18,7 +18,7 @@ cp -frv ~/Documents/config/slock/* ~/Documents/Source/slock/
 cp -frv ~/Documents/config/dunst/* ~/Documents/Source/dunst/
 
 # Get zpaq source
-git clone https://github.com/nemequ/zpaq
+git clone https://github.com/ejans/zpaq
 
 # Get lrzip source
 sudo apt-get install libbz2-dev liblzo2-dev
