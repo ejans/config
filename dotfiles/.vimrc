@@ -9,6 +9,7 @@ set pastetoggle=<F2>
 set showmode
 
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.usc set filetype=lua
 
 " To Use Eclim
 set nocompatible
