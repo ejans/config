@@ -2,3 +2,4 @@
 # Settings to use nvidia gpu
 vo=vdpau
 vc=ffh264vdpau
+nolirc=yes
