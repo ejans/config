@@ -2,6 +2,11 @@
 
 # link dotfiles, screenfetch and shortcuts folders
 cd ~/
+
+# move current files
+mv -v .bashrc .bashrc.old
+mv -v .profile .profile.old
+
 ln -sv Documents/config/dotfiles/.bashrc
 ln -sv Documents/config/dotfiles/.bash_aliases
 ln -sv Documents/config/dotfiles/.bash_functions
@@ -14,28 +19,15 @@ ln -sv Documents/config/dotfiles/.profile
 ln -sv Documents/config/dotfiles/.vimrc
 ln -sv Documents/config/dotfiles/.Xdefaults
 ln -sv Documents/config/dotfiles/.xinitrc
-# give .viminfo right user to use previous mark position
-sudo rm -fv ~/.viminfo
-touch ~/.viminfo
-#cp -frv screenfetch ~/Documents/Source/
-ln -sv screenfetch Documents/Source/screenfetch 
-#cp -frv shortcuts/ ~/Documents/.Shortcuts/
-ln -sv shortcuts Documents/.Shortcuts/
 
-cd files_to_copy/
+# replace original failsafe to shorten boot time
+#sudo cp -frv /etc/init/failsafe.conf /etc/init/failsafe.conf.old
+sudo cp -frv ~/Documents/config/files_to_copy/failsafe.conf /etc/init/
 
-# Copy custom xorg configuration
-#sudo cp -frv xorg.conf /etc/X11/
+# replace keyboard layout
+sudo cp -frv /usr/share/X11/xkb/symbols/us /usr/share/X11/xkb/symbols/us.old
+sudo cp -frv ~/Documents/config/files_to_copy/us /usr/share/X11/xkb/symbols/
 
-# Link binary files
-sudo ln -sv ~/Documents/Source/zpaq/zpaq /usr/local/bin/zpaq
-
-# Replace original failsafe to shorten boot time
-sudo cp -frv failsafe.conf /etc/init/
-
-# Replace keyboard layout
-sudo cp -frv us /usr/share/X11/xkb/symbols/
-
-# Move eduroam template to wicd and add to active templates
-#sudo cp -frv eduroam /etc/wicd/encryption/templates/
-#sudo echo "eduroam" >> /etc/wicd/encryption/active
+# remove suspend on lidswitch
+echo 'HandleLidSwitch=ignore' | sudo tee -a /etc/systemd/logind.conf
+sudo restart systemd-logind
