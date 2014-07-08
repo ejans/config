@@ -20,3 +20,4 @@ alias logcat='python ~/Documents/source/colored-adb-logcat/colored-adb-logcat.py
 alias KULBackup='bash ~/Documents/config/shortcuts/kulBackup.sh'
 alias wiki='bash ~/Documents/config/shortcuts/wikisole.sh'
 alias startup='bash ~/Documents/config/shortcuts/startup.sh'
+alias bolderlomount='bash ~/Documents/config/shortcuts/remoteMount.sh'

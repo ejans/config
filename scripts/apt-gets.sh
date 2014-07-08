@@ -15,6 +15,9 @@ sudo apt-get install disper pm-utils -y
 # laptop
 sudo apt-get install wicd wicd-curses rfkill -y
 
+#T430
+sudo apt-get install fprint_demo guvcview -y
+
 # programming1
 sudo apt-get install mercurial make cmake cmake-curses-gui subversion \
 mercurial gcc g++ ant rlwrap colormake colordiff -y

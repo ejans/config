@@ -2,6 +2,9 @@
 set autoindent
 set foldmethod=syntax
 
+" Background=dark for better comment view
+set background=dark
+
 "nnoremap <F12> :set noautoindent<CR>
 
 nnoremap <F2> :set invpaste paste?<CR>
