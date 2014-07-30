@@ -1,6 +1,6 @@
 [user]
 	name = Evert Jans
-	email = evert.jans@mech.kuleuven.be
+	email = evert@mintconsulting.be
 [credential]
 	helper = cache --timeout=7200
 [core]
