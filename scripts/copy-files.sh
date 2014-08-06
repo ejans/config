@@ -31,3 +31,6 @@ sudo cp -frv ~/Documents/config/files_to_copy/us /usr/share/X11/xkb/symbols/
 # remove suspend on lidswitch
 echo 'HandleLidSwitch=ignore' | sudo tee -a /etc/systemd/logind.conf
 sudo restart systemd-logind
+
+# add crontab to monitor battery
+echo '*/10 * * * * env DISPLAY=:0 '$HOME'/Documents/config/shortcuts/notify-battery-low.sh' | crontab -

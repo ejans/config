@@ -13,7 +13,7 @@ sudo apt-get install cmus cmus-plugin-ffmpeg -y
 sudo apt-get install disper pm-utils -y
 
 # laptop
-sudo apt-get install wicd wicd-curses rfkill -y
+sudo apt-get install wicd wicd-curses rfkill acpi -y
 
 #T430
 sudo apt-get install fprint_demo guvcview -y
