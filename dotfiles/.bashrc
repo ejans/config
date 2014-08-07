@@ -126,12 +126,9 @@ shopt -s globstar
 # to use android and emulate
 #export PATH=$HOME/Programs/android-sdk-linux/tools:$PATH
 
-# to use looci
-#export LOOCI=$HOME/Documents/KULeuven/looci/V2/looci
-
 # to reset classpath
 #export CLASSPATH=""
 #export CLASSPATH=/usr/share/java/ant-contrib.jar:$CLASSPATH
 
-# set kul path variable 
-#export KUL=$HOME/Documents/KULeuven
+# set mint path variable 
+export MINT=$HOME/Documents/Mint_Consulting
