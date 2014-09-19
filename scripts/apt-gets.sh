@@ -20,7 +20,7 @@ sudo apt-get install fprint_demo guvcview -y
 
 # programming1
 sudo apt-get install mercurial make cmake cmake-curses-gui subversion \
-mercurial gcc g++ ant rlwrap colormake colordiff -y
+mercurial gcc g++ ant rlwrap colormake colordiff lftp -y
 
 # programming2
 sudo apt-get install virtualbox wireshark texlive texlive-latex3 \
