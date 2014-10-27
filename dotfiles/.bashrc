@@ -132,3 +132,4 @@ shopt -s globstar
 
 # set mint path variable 
 export MINT=$HOME/Documents/Mint_Consulting
+export OPENSCADPATH=$HOME/.OpenSCAD/libraries

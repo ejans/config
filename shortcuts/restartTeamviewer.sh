@@ -2,5 +2,5 @@
 
 sudo killall -9 TeamViewer.exe
 sudo killall -9 teamviewerd
-sleep 4
+sleep 8
 sudo teamviewer --start daemon

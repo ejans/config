@@ -6,6 +6,7 @@ sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg xsel 
 # media stuff
 sudo apt-get install eog zathura rox-filer firefox geany flashplugin-installer \
 mplayer unetbootin thunderbird keepassx youtube-dl -y
+
 # cmus a foobar2000 style player
 sudo apt-get install cmus cmus-plugin-ffmpeg -y
 
@@ -20,7 +21,7 @@ sudo apt-get install fprint_demo guvcview -y
 
 # programming1
 sudo apt-get install mercurial make cmake cmake-curses-gui subversion \
-mercurial gcc g++ ant rlwrap colormake colordiff lftp -y
+mercurial gcc g++ ant rlwrap colormake colordiff lftp ccze -y
 
 # programming2
 sudo apt-get install virtualbox wireshark texlive texlive-latex3 \
