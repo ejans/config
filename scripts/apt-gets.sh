@@ -16,7 +16,7 @@ sudo apt-get install disper pm-utils -y
 # laptop
 sudo apt-get install wicd wicd-curses rfkill acpi -y
 
-#T430
+# T430
 sudo apt-get install fprint_demo guvcview -y
 
 # programming1
@@ -25,7 +25,10 @@ mercurial gcc g++ ant rlwrap colormake colordiff lftp ccze wkhtmltopdf -y
 
 # programming2
 sudo apt-get install virtualbox wireshark texlive texlive-latex3 \
-latex-beamer apache2 pandoc discount latexmk inkscape gimp -y
+texlive-latex-extra latex-beamer apache2 pandoc discount latexmk inkscape gimp -y
+
+# programming3
+sudo apt-get install avrdude avr-libc gcc-avr -y
 
 # zips
 sudo apt-get install unzip pbzip2 file-roller -y
