@@ -3,7 +3,8 @@ xterm*background:	Black
 xterm*foreground:	Green
 xterm*cursorColor:	Orchid
 xterm*cursorBlink:	true
-xterm*font:		terminus-12
+!xterm*font:		terminus-12
+xterm*font:		terminus-14
 xterm*cursorOnTime:	700
 xterm*cursorOffTime:	300
 xterm*saveLines:	2000000

@@ -20,6 +20,10 @@ sudo apt-get install wicd wicd-curses rfkill acpi -y
 # T430
 sudo apt-get install fprint_demo guvcview -y
 
+# T450s
+# Bluetooth
+sudo apt-get install blueman -y
+
 # programming1
 sudo apt-get install mercurial make cmake cmake-curses-gui subversion \
 mercurial gcc g++ ant rlwrap colormake colordiff lftp ccze wkhtmltopdf gitk -y
@@ -27,7 +31,7 @@ mercurial gcc g++ ant rlwrap colormake colordiff lftp ccze wkhtmltopdf gitk -y
 # programming2
 sudo apt-get install virtualbox wireshark texlive texlive-latex3 \
 texlive-latex-extra latex-beamer apache2 pandoc discount latexmk inkscape \ 
-gimp -y
+gimp pdfmod -y
 
 # programming3
 sudo apt-get install avrdude avr-libc gcc-avr -y

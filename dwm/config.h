@@ -1,7 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]           ="-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
+//static const char font[]           ="-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
+static const char font[]           ="-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*";
 static const char ter1[]           = "tabbed";
 static const char ter2[]           = "-c";
 static const char ter3[]           = "uxterm";
@@ -24,9 +25,9 @@ static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
 /* laptop */
-//static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
 /* desktop */
-static const char *tags[] = { "1", "2", "3", "4" };
+//static const char *tags[] = { "1", "2", "3", "4" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -39,9 +40,9 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       0,            False,       -1 },
 	{ "Keepassx", NULL,       NULL,       0,            True,        -1 },
 	/* laptop */
-	//{ "Thunderbird", NULL,    NULL,       1 << 5,       False,       -1 },
+	{ "Thunderbird", NULL,    NULL,       1 << 5,       False,       -1 },
 	/* desktop */
-	{ "Thunderbird", NULL,    NULL,       1 << 3,       False,       -1 },
+	//{ "Thunderbird", NULL,    NULL,       1 << 3,       False,       -1 },
 };
 
 /* layout(s) */
