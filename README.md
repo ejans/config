@@ -8,8 +8,16 @@ This will install, get and make/install all files.
 
 # SSD usage
 
-Install a fresh Ubuntu server edition on only one partition without lvm.
-eddit `/etc/fstab` to look like this:
+Install a fresh Ubuntu server edition on only one partition with lvm and
+encryption of home:
+
+| Filesystem           | Size | Used | Avail | Use% | Mounted on  |
+| -------------------- | ---- | ---- | ----- | ---- | ----------  |
+| /dev/sda1            |  19G | 8.0G | 9.3G  | 47%  | /           |
+| /dev/sda5            | 138G | 109G |  22G  | 84%  | /home       |
+| /home/evert/.Private | 138G | 109G |  22G  | 84%  | /home/evert |
+
+edit `/etc/fstab` to look like this:
 
 ```
 UUID=	/	ext4	noatime,errors=remount-ro,discard	0	1
