@@ -19,6 +19,7 @@ ln -sv Documents/config/dotfiles/.profile
 ln -sv Documents/config/dotfiles/.vimrc
 ln -sv Documents/config/dotfiles/.Xdefaults
 ln -sv Documents/config/dotfiles/.xinitrc
+ln -sv Documents/config/dotfiles/.asoundrc
 
 # replace original failsafe to shorten boot time
 #sudo cp -frv /etc/init/failsafe.conf /etc/init/failsafe.conf.old

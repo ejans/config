@@ -1,12 +1,17 @@
 #!/bin/bash
 
 # basic
-sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg \ 
-xsel -y
+sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg \
+openssh-server xsel libxft-dev libxrandr-dev xinit htop nfs-common tree -y
+
+# libs: TODO
 
 # media stuff
-sudo apt-get install eog zathura evince rox-filer firefox geany \ 
+sudo apt-get install eog zathura evince rox-filer firefox geany \
 flashplugin-installer mplayer unetbootin thunderbird keepassx youtube-dl -y
+
+# printer
+sudo apt-get install cups -y
 
 # cmus a foobar2000 style player
 sudo apt-get install cmus cmus-plugin-ffmpeg -y
@@ -18,19 +23,20 @@ sudo apt-get install disper pm-utils -y
 sudo apt-get install wicd wicd-curses rfkill acpi -y
 
 # T430
-sudo apt-get install fprint_demo guvcview -y
+#sudo apt-get install fprint_demo guvcview -y
 
 # T450s
 # Bluetooth
-sudo apt-get install blueman -y
+#sudo apt-get install blueman -y
 
 # programming1
 sudo apt-get install mercurial make cmake cmake-curses-gui subversion \
-mercurial gcc g++ ant rlwrap colormake colordiff lftp ccze wkhtmltopdf gitk -y
+mercurial gcc g++ ant rlwrap colormake colordiff lftp ccze wkhtmltopdf gitk \
+rdesktop nmap openvpn -y
 
 # programming2
 sudo apt-get install virtualbox wireshark texlive texlive-latex3 \
-texlive-latex-extra latex-beamer apache2 pandoc discount latexmk inkscape \ 
+texlive-latex-extra latex-beamer apache2 pandoc discount latexmk inkscape \
 gimp pdfmod -y
 
 # programming3

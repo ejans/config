@@ -1,4 +1,6 @@
 # Write your default config options here!
+# Use alsa
+ao=alsa,sdl:aalib
 # Settings to use nvidia gpu
 #vo=vdpau
 #vc=ffh264vdpau

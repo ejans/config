@@ -17,7 +17,6 @@ git clone git://git.suckless.org/slock
 cp -frv ~/Documents/config/dwm/* ~/Documents/source/dwm/
 cp -frv ~/Documents/config/dmenu/* ~/Documents/source/dmenu/
 cp -frv ~/Documents/config/tabbed/* ~/Documents/source/tabbed/
-cp -frv ~/Documents/config/slock/* ~/Documents/source/slock/
 
 # Get zpaq source
 git clone https://github.com/ejans/zpaq
