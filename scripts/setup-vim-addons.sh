@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 sudo apt-get install python-flake8 -y
 mkdir ~/.vim/bundle -p
