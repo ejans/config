@@ -1,49 +1,56 @@
 
-set autoindent
-set foldmethod=syntax
+" Activate 256 colors                                                                                                  
+if &term == 'xterm' || &term == 'screen'
+    set t_Co=256 " Add 256 colors capability
+endif
 
-" Background=dark for better comment view
-set background=dark
+filetype off
+set nocompatible
 
-"nnoremap <F12> :set noautoindent<CR>
+" Vundle stuff
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'tmhedberg/SimpylFold'
+
+call vundle#end()
+
+set autoindent          " Indent at the same level of the previous line
+set foldmethod=syntax   " Fold according to syntax
+set background=dark     " Assume a dark background
+set incsearch           " Start searching while typing
+set hlsearch            " Highlight matches
+match ErrorMsg '\%81v.' " Highlight text that goes over the 80 column limit
+set mouse=a             " Automatically enable mouse usage
+
+set cursorline          " Highlight current line
+" Remove line (cterm) and set bg of cursor to Darkgrey
+hi CursorLine cterm=NONE ctermbg=235
+
+" Fix indentation
+map <F4> mzgg=G`z<CR>
+
+filetype plugin indent on " Automatically detect file types.
+
+" Toggle paste mode (suppress indentation)
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
-map <F7> mzgg=G`z<CR>
-
 au BufRead,BufNewFile *.md set filetype=markdown
-au BufRead,BufNewFile *.usc set filetype=lua
-
-" To Use Eclim
-set nocompatible
-filetype plugin indent on
 
 " To make correct indentation in python
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+" Tabs are spaces, Use indents of 4 spaces, Let backspace delete indent
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4 
+
+" To make correct indentation in xml
+autocmd FileType xml setlocal expandtab shiftwidth=2 tabstop=2
 
 " To set printeroptions => use hardcopy > test.ps to print
-set printoptions=paper:A4,portrait:y "set to n for landscape
+set printoptions=paper:A4,portrait:y " Set to n for landscape
 
-" Highlight text that goes over the 80 column limit
-"match ErrorMsg '\%>80v.\+'
-match ErrorMsg '\%81v.'
-
-" Start searching while typing
-set incsearch
-
-" Highlight matches
-set hlsearch
-
-" More advanced text highlight
-"augroup collumnLimit
-"	autocmd!
-"	autocmd BufEnter,WinEnter,FileType scala,java
-"		\ highlight CollumnLimit ctermbg=DarkGrey guibg=DarkGrey
-"	let collumnLimit = 79 " feel free to customize
-"	let pattern =
-"		\ '\%<' . (collumnLimit+1) . 'v.\%>' . collumnLimit . 'v'
-"	autocmd BufEnter,WinEnter,FileType scala,java
-"		\ let w:m1=matchadd('CollumnLimit', pattern, -1)
-"augroup END
+" Old
+"set number "Line numbers on

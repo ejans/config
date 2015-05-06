@@ -7,6 +7,7 @@
 ./source-makes.sh
 ./create-media-folders.sh
 ./set-bash-editor.sh
+./setup-vim-addons.sh
 
 echo -e "\033[35m==========================\033[0m"
 echo -e "\033[36mdone!\033[0m"
