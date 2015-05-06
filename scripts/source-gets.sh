@@ -4,6 +4,8 @@
 sudo apt-get build-dep dwm -y
 # get dunst
 sudo apt-get install dunst -y
+# get libxrandr-dev for slock
+sudo apt-get install libxrandr-dev -y
 
 # get sources
 mkdir ~/Documents/source

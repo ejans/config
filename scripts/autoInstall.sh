@@ -8,5 +8,6 @@
 ./create-media-folders.sh
 ./set-bash-editor.sh
 
-echo -e "\033[37mdone!\033[0m"
+echo -e "\033[35m==========================\033[0m"
+echo -e "\033[36mdone!\033[0m"
 sleep 5

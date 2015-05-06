@@ -29,4 +29,4 @@ tmpfs	/var/log/apt	tmpfs	defaults,noatime		0	0
 tmpfs	/var/log/apache2	tmpfs	defaults,noatime	0	0
 ```
 
-The `fstrim` command is not necessary because we use discard.
+The `fstrim` command is automatically executed with crontab on a weekly base

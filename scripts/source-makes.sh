@@ -2,6 +2,8 @@
 
 # make dwm source
 cd ~/Documents/source/dwm
+# Checkout last commit before font screwup
+git checkout 35db6d8
 cp patch/dwm-6.0-smfact.diff .
 git apply dwm-6.0-smfact.diff
 rm dwm-6.0-smfact.diff
