@@ -14,6 +14,11 @@ cd ../slock
 make
 cd ../tabbed
 make
+cd ../st
+cp patch/st-scrollback.diff
+git apply st-scrollback.diff
+rm st-scrollback.diff
+make
 
 # make zpaq
 cd ../zpaq
@@ -28,9 +33,12 @@ cd ../dmenu
 sudo make install
 cd ../tabbed
 sudo make install
+cd ../st
+sudo make install
 
 # install zpaq
 cd ../zpaq
+git apply fix_makefile.patch
 sudo make install
 
 cd ..

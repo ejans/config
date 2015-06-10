@@ -40,7 +40,7 @@ sudo apt-get install make cmake gcc g++ -y
 # programming2 (latex)
 #sudo apt-get install virtualbox texlive texlive-latex3 \
 #texlive-latex-extra latex-beamer apache2 pandoc discount latexmk inkscape \
-#gimp pdfmod -y
+#gimp pdfmod graphviz -y
 
 # programming3 (avr)
 #sudo apt-get install avrdude avr-libc gcc-avr -y

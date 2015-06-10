@@ -17,7 +17,6 @@ ln -sv Documents/config/dotfiles/.mcabber
 ln -sv Documents/config/dotfiles/.mplayer
 ln -sv Documents/config/dotfiles/.profile
 ln -sv Documents/config/dotfiles/.vimrc
-ln -sv Documents/config/dotfiles/.Xdefaults
 ln -sv Documents/config/dotfiles/.xinitrc
 ln -sv Documents/config/dotfiles/.asoundrc
 

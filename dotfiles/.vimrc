@@ -1,6 +1,6 @@
 
 " Activate 256 colors                                                                                                  
-if &term == 'xterm' || &term == 'screen'
+if &term == 'xterm' || &term == 'screen' || &term == 'st-256color'
     set t_Co=256 " Add 256 colors capability
 endif
 
@@ -25,6 +25,7 @@ set incsearch           " Start searching while typing
 set hlsearch            " Highlight matches
 match ErrorMsg '\%81v.' " Highlight text that goes over the 80 column limit
 set mouse=a             " Automatically enable mouse usage
+set ttym=sgr		" Enable mouse in st terminal
 
 set cursorline          " Highlight current line
 " Remove line (cterm) and set bg of cursor to Darkgrey

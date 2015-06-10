@@ -6,7 +6,9 @@
 #xrandr --output DVI-D-0 --rotate right
 # set dpi lower
 #xrandr --dpi 80
-xrandr --dpi 90
+
+#TODO Test
+#xrandr --dpi 90
 
 # dwm
 exec dwm

@@ -5,8 +5,10 @@
 static const char font[]           ="-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*";
 static const char ter1[]           = "tabbed";
 static const char ter2[]           = "-c";
-static const char ter3[]           = "uxterm";
-static const char ter4[]           = "-into";
+//static const char ter3[]           = "uxterm";
+static const char ter3[]           = "st";
+//static const char ter4[]           = "-into";
+static const char ter4[]           = "-w";
 static const char brow1[]          = "firefox";
 static const char slock1[]         = "slock";
 static const char keep1[]         = "keepassx";
