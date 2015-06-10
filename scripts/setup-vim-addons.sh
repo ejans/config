@@ -2,9 +2,12 @@
 
 REL=$(lsb_release -rs)
 
+sudo apt-get install vim -y
+
 case $REL in
 12.04)
-    sudo apt-get pip install -y; sudo pip install flake8
+    sudo apt-get install python-pip -y
+    sudo pip install flake8
     ;;
 14.04)
     sudo apt-get install python-flake8 -y
