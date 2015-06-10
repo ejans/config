@@ -1,6 +1,6 @@
 
 " Activate 256 colors                                                                                                  
-if &term == 'xterm' || &term == 'screen' || &term == 'st-256color'
+if &term == 'xterm' || &term == 'screen' || &term == 'xterm-color'
     set t_Co=256 " Add 256 colors capability
 endif
 
