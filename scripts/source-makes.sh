@@ -15,16 +15,16 @@ make
 cd ../tabbed
 make
 cd ../st
-cp patch/st-scrollback.diff
-git apply st-scrollback.diff
-rm st-scrollback.diff
+cp patch/st-scrollback-shift-mouse.diff .
+git apply st-scrollback-shift-mouse.diff
+rm st-scrollback-shift-mouse.diff
 make
 
 # make zpaq
 cd ../zpaq
 make
 
-# install dwm
+# install dwm, slock, dmenu, tabbed, st
 cd ../dwm
 sudo make install
 cd ../slock

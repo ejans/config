@@ -1,7 +1,7 @@
 #!/bin/bash
 # We need a cronjob to check this every 5 minutes or so
 
-battery_level=`acpi -b | grep -P -o '[0-9]+(?=%)'`
+battery_level=`acpi -b | grep -P -o '[0-9]+(?=%)' | tail -1`
 
 if [ $battery_level -le 10 ]
 then

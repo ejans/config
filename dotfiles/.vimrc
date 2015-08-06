@@ -1,5 +1,4 @@
-
-" Activate 256 colors                                                                                                  
+" Activate 256 colors
 if &term == 'xterm' || &term == 'screen' || &term == 'xterm-color'
     set t_Co=256 " Add 256 colors capability
 endif
@@ -42,6 +41,13 @@ set pastetoggle=<F2>
 set showmode
 
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Mapping for odoo restart
+map <F5> :! sudo service odoo restart<CR>
+
+" XML folding
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
 
 " To make correct indentation in python
 " Tabs are spaces, Use indents of 4 spaces, Let backspace delete indent

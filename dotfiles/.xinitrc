@@ -10,13 +10,15 @@
 #TODO Test
 #xrandr --dpi 90
 
+# if .Xmodmap exists use it 
+#if [ -f $HOME/.Xmodmap ]; then
+#    /usr/bin/xmodmap $HOME/.Xmodmap
+#fi
+
+syndaemon -i 1 -K -d
+
 # dwm
 exec dwm
 
 # openbox
 #exec openbox-session
-
-# if .Xmodmap exists use it 
-if [ -f $HOME/.Xmodmap ]; then
-    /usr/bin/xmodmap $HOME/.Xmodmap
-fi

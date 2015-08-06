@@ -2,7 +2,7 @@
 
 # basic
 sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg \
-openssh-server xsel xinit htop tree -y
+openssh-server xsel xinit htop tree pinfo -y
 
 # libs: TODO
 #libxft-dev
@@ -40,7 +40,7 @@ sudo apt-get install make cmake gcc g++ -y
 # programming2 (latex)
 #sudo apt-get install virtualbox texlive texlive-latex3 \
 #texlive-latex-extra latex-beamer apache2 pandoc discount latexmk inkscape \
-#gimp pdfmod graphviz -y
+#gimp pdfmod graphviz darktable -y
 
 # programming3 (avr)
 #sudo apt-get install avrdude avr-libc gcc-avr -y

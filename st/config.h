@@ -8,11 +8,19 @@
 //static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
 static char font[] = "-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*";
 static int borderpx = 2;
+static int histsize = 20000;
+
+/*
+ * What program is execed by st depends of these precedence rules:
+ * 1: program passed with -e
+ * 2: utmp option
+ * 3: SHELL environment variable
+ * 4: value of shell in /etc/passwd
+ * 5: value of shell in config.h
+ */
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
 static char stty_args[] = "stty raw -echo -iexten echonl";
-//static int histsize = 2000000;
-static int histsize = 20000;
 
 /* identification sequence returned in DA and DECID */
 static char vtiden[] = "\033[?6c";
@@ -33,7 +41,7 @@ static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
 /* alt screens */
-static bool allowaltscreen = true;
+static int allowaltscreen = 1;
 
 /* frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
@@ -58,7 +66,7 @@ static int bellvolume = 0;
 
 /* TERM value */
 //static char termname[] = "st-256color";
-static char termname[] = "xterm";
+static char termname[] = "xterm-color";
 
 static unsigned int tabspaces = 8;
 
@@ -97,9 +105,19 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor
  */
+//static unsigned int defaultfg = 7;
 static unsigned int defaultfg = 10;
 static unsigned int defaultbg = 0;
+//static unsigned int defaultcs = 256;
 static unsigned int defaultcs = 257;
+
+
+/*
+ * Default colour and shape of the mouse cursor
+ */
+static unsigned int mouseshape = XC_xterm;
+static unsigned int mousefg = 7;
+static unsigned int mousebg = 0;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this
@@ -111,10 +129,17 @@ static unsigned int defaultunderline = 7;
 
 /* Internal mouse shortcuts. */
 /* Beware that overloading Button1 will disable the selection. */
-static Mousekey mshortcuts[] = {
+static Mousekey mkeys[] = {
 	/* button               mask            string */
-	{ Button4,              XK_ANY_MOD,     "\031" },
-	{ Button5,              XK_ANY_MOD,     "\005" },
+	//{ Button4,              XK_NO_MOD,      "\031" },
+	//{ Button5,              XK_NO_MOD,      "\005" },
+	{ Button4,		XK_NO_MOD,	""},
+};
+
+static MouseShortcut mshortcuts[] = {
+	/* button               mask            function        argument */
+	{ Button4,              ShiftMask,      kscrollup,      { .i = 1 } },
+	{ Button5,              ShiftMask,      kscrolldown,    { .i = 1 } },
 };
 
 /* Internal keyboard shortcuts. */
@@ -125,16 +150,16 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ MODKEY|ShiftMask,     XK_Prior,       xzoom,          {.i = +1} },
-	{ MODKEY|ShiftMask,     XK_Next,        xzoom,          {.i = -1} },
-	{ MODKEY|ShiftMask,     XK_Home,        xzoomreset,     {.i =  0} },
+	{ MODKEY|ShiftMask,     XK_Prior,       xzoom,          {.f = +1} },
+	{ MODKEY|ShiftMask,     XK_Next,        xzoom,          {.f = -1} },
+	{ MODKEY|ShiftMask,     XK_Home,        xzoomreset,     {.f =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_Insert,      clippaste,      {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_C,           clipcopy,       {.i =  0} },
 	{ MODKEY|ShiftMask,     XK_V,           clippaste,      {.i =  0} },
 	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,		XK_Page_Up,	kscrollup,	{.i = -1} },
-	{ ShiftMask,		XK_Page_Down,	kscrolldown,	{.i = -1} },
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
