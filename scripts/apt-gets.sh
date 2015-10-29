@@ -35,7 +35,7 @@ sudo apt-get install make cmake gcc g++ -y
 
 # programming1
 #sudo apt-get install mercurial cmake-curses-gui subversion mercurial ant \
-#rlwrap colormake colordiff ccze wkhtmltopdf gitk -y
+#rlwrap colormake colordiff ccze wkhtmltopdf gitk myrepos git-annex -y
 
 # programming2 (latex)
 #sudo apt-get install virtualbox texlive texlive-latex3 \
