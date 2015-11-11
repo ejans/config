@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -84,6 +84,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -108,7 +111,6 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -120,14 +122,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# set bash to vi mode
-
+# Set bash to vi mode
 set -o vi
 
-# set mint path variable
-
+# Set mint path variable
 export MINT=$HOME/Documents/Mint_Consulting
 
-# set openscad path variable
-
-export OPENSCADPATH=$HOME/.OpenSCAD/libraries
+# Set openscad path variable
+#export OPENSCADPATH=$HOME/.OpenSCAD/libraries

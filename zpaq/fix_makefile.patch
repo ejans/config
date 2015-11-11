@@ -1,19 +1,17 @@
-From fbeccbb2c4e5b1fc3eb8c059f9f1b993a869bc02 Mon Sep 17 00:00:00 2001
-From: Evert Jans <evert@mintconsulting.be>
-Date: Tue, 20 Jan 2015 22:13:01 +0100
-Subject: [PATCH] added decent makefile
+From e84e2cd48b0e07a399f3df722f649cf587c876be Mon Sep 17 00:00:00 2001
+From: Evert Jans <evert@sonuwe.com>
+Date: Thu, 29 Oct 2015 18:17:22 +0100
+Subject: [PATCH] evert fix
 
 ---
- Makefile | 28 ++++++++++++++++++++++++++--
- 1 file changed, 26 insertions(+), 2 deletions(-)
+ Makefile | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
 
 diff --git a/Makefile b/Makefile
-index 6cf661e..ccbf5eb 100644
+index 6cf661e..1ae01ac 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -1,2 +1,26 @@
--zpaq: zpaq.cpp libzpaq.cpp libzpaq.h
--	g++ -O3 -march=native -Dunix zpaq.cpp libzpaq.cpp -pthread -o zpaq
+@@ -1,2 +1,23 @@
 +CCFLAGS= -O3 -c -DNDEBUG
 +PPFLAGS= -O3 -march=native -Dunix zpaq.cpp libzpaq.cpp -pthread
 +prefix=/usr/local
@@ -22,7 +20,8 @@ index 6cf661e..ccbf5eb 100644
 +
 +all: zpaq
 +
-+zpaq: zpaq.cpp libzpaq.cpp libzpaq.h
+ zpaq: zpaq.cpp libzpaq.cpp libzpaq.h
+-	g++ -O3 -march=native -Dunix zpaq.cpp libzpaq.cpp -pthread -o zpaq
 +	g++ $(PPFLAGS) -o $@
 +
 +install: all
@@ -38,5 +37,5 @@ index 6cf661e..ccbf5eb 100644
 +clean:
 +	rm -vf zpaq
 -- 
-1.9.1
+2.5.0
 

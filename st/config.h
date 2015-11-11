@@ -5,8 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
-static char font[] = "-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*";
+static char font[] = "Terminus:pixelsize=14:antialias=false:autohint=false";
 static int borderpx = 2;
 static int histsize = 20000;
 
@@ -20,7 +19,7 @@ static int histsize = 20000;
  */
 static char shell[] = "/bin/sh";
 static char *utmp = NULL;
-static char stty_args[] = "stty raw -echo -iexten echonl";
+static char stty_args[] = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
 static char vtiden[] = "\033[?6c";
@@ -64,7 +63,7 @@ static unsigned int cursorthickness = 2;
  */
 static int bellvolume = 0;
 
-/* TERM value */
+/* default TERM value */
 //static char termname[] = "st-256color";
 static char termname[] = "xterm-color";
 
@@ -97,20 +96,31 @@ static const char *colorname[] = {
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
+	//"#555555",
 	"#da70d6",
 };
 
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor
+ * foreground, background, cursor, reverse cursor
  */
 //static unsigned int defaultfg = 7;
 static unsigned int defaultfg = 10;
 static unsigned int defaultbg = 0;
 //static unsigned int defaultcs = 256;
+//static unsigned int defaultrcs = 257;
 static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 11;
 
+/*
+ * Default shape of cursor
+ * 2: Block ("█")
+ * 4: Underline ("_")
+ * 6: Bar ("|")
+ * 7: Snowman ("☃")
+ */
+static unsigned int cursorshape = 2;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -127,8 +137,10 @@ static unsigned int mousebg = 0;
 static unsigned int defaultitalic = 11;
 static unsigned int defaultunderline = 7;
 
-/* Internal mouse shortcuts. */
-/* Beware that overloading Button1 will disable the selection. */
+/* 
+ * Internal mouse shortcuts.
+ * Beware that overloading Button1 will disable the selection.
+ */
 static Mousekey mkeys[] = {
 	/* button               mask            string */
 	//{ Button4,              XK_NO_MOD,      "\031" },
@@ -137,9 +149,9 @@ static Mousekey mkeys[] = {
 };
 
 static MouseShortcut mshortcuts[] = {
-	/* button               mask            function        argument */
-	{ Button4,              ShiftMask,      kscrollup,      { .i = 1 } },
-	{ Button5,              ShiftMask,      kscrolldown,    { .i = 1 } },
+	/* button		mask		function	argument */
+	{ Button4,		ShiftMask,	kscrollup,	{ .i = 1 } },
+	{ Button5,		ShiftMask,	kscrolldown,	{ .i = 1 } },
 };
 
 /* Internal keyboard shortcuts. */
@@ -147,6 +159,7 @@ static MouseShortcut mshortcuts[] = {
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
+	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
@@ -199,11 +212,17 @@ static KeySym mappedkeys[] = { -1 };
  */
 static uint ignoremod = Mod2Mask|XK_SWITCH_MOD;
 
-/* Override mouse-select while mask is active (when MODE_MOUSE is set).
+/*
+ * Override mouse-select while mask is active (when MODE_MOUSE is set).
  * Note that if you want to use ShiftMask with selmasks, set this to an other
- * modifier, set to 0 to not use it. */
+ * modifier, set to 0 to not use it.
+ */
 static uint forceselmod = ShiftMask;
 
+/*
+ * This is the huge key array which defines all compatibility to the Linux
+ * world. Please decide about changes wisely.
+ */
 static Key key[] = {
 	/* keysym           mask            string      appkey appcursor crlf */
 	{ XK_KP_Home,       ShiftMask,      "\033[2J",       0,   -1,    0},

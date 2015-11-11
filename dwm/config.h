@@ -1,18 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-//static const char font[]           ="-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
-static const char font[]           ="-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*";
-static const char ter1[]           = "tabbed";
-static const char ter2[]           = "-c";
-//static const char ter3[]           = "uxterm";
-static const char ter3[]           = "st";
-//static const char ter4[]           = "-into";
-static const char ter4[]           = "-w";
-static const char brow1[]          = "firefox";
-static const char slock1[]         = "slock";
-static const char keep1[]         = "keepassx";
-
+static const char *fonts[] = {
+	"Terminus:size=14"
+};
+static const char dmenufont[]       = "Terminus:size=14";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
@@ -21,7 +13,7 @@ static const char selbgcolor[]      = "#005577";
 static const char selfgcolor[]      = "#eeeeee";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int minwsz    = 20;       /* Minimal heigt of a client for smfact */
+static const unsigned int minwsz    = 20;       /* minimal heigt of a client for smfact */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
@@ -38,7 +30,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
-	{ "Inkscape",     NULL,       NULL,       0,            True,        -1 },
+	{ "Inkscape", NULL,       NULL,       0,            True,        -1 },
 	{ "Firefox",  NULL,       NULL,       0,            False,       -1 },
 	{ "Keepassx", NULL,       NULL,       0,            True,        -1 },
 	/* laptop */
@@ -73,19 +65,16 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[] = { ter1, ter2, ter3, ter4, NULL };
-static const char *browsercmd[] = { brow1, NULL };
-static const char *slockcmd[] = { slock1, NULL };
-static const char *keepasscmd[] = { keep1, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *termcmd[]  = { "tabbed -c st -w", NULL };
+static const char *browsercmd[] = { "firefox", NULL };
+static const char *slockcmd[] = { "slock", NULL };
+static const char *keepasscmd[] = { "keepassx", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = browsercmd } },
-	{ MODKEY|ShiftMask,		XK_l,      spawn,	   {.v = slockcmd } },
-	{ MODKEY|ShiftMask,		XK_k,      spawn,	   {.v = keepasscmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -93,6 +82,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = browsercmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = slockcmd } },
+	{ MODKEY|ShiftMask,             XK_k,      spawn,          {.v = keepasscmd } },
 	{ MODKEY|ShiftMask,             XK_b,      setsmfact,      {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_t,      setsmfact,      {.f = -0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },

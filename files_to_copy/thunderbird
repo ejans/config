@@ -1,0 +1,3 @@
+#!/bin/sh
+LC_TIME="en_DK.UTF8"
+/usr/bin/thunderbird $@
