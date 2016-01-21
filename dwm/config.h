@@ -2,9 +2,9 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"Terminus:size=14"
+	"Terminus:pixelsize=14"
 };
-static const char dmenufont[]       = "Terminus:size=14";
+static const char dmenufont[]       = "Terminus:pixelsize=14";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
@@ -66,7 +66,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "tabbed -c st -w", NULL };
+static const char *termcmd[]  = { "tabbed", "-c", "st", "-w", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char *keepasscmd[] = { "keepassx", NULL };
