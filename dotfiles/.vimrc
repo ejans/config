@@ -22,13 +22,13 @@ set foldmethod=syntax   " Fold according to syntax
 set background=dark     " Assume a dark background
 set incsearch           " Start searching while typing
 set hlsearch            " Highlight matches
-match ErrorMsg '\%81v.' " Highlight text that goes over the 80 column limit
+match ErrorMsg '\%161v.' " Highlight text that goes over the 80 column limit
 set mouse=a             " Automatically enable mouse usage
 set ttym=sgr		" Enable mouse in st terminal
 
 set cursorline          " Highlight current line
 " Remove line (cterm) and set bg of cursor to Darkgrey
-hi CursorLine cterm=NONE ctermbg=235
+hi CursorLine cterm=NONE ctermbg=237
 
 " Fix indentation
 map <F4> mzgg=G`z<CR>

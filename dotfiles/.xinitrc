@@ -1,5 +1,9 @@
 # conky
 (conky | while read LINE; do xsetroot -name "$LINE"; done) &
+# dwmstatus
+# (dwmstatus)&
+# Set bg
+# /home/evert/.fehbg
 
 # Desktop
 # set left screen rotation
@@ -15,7 +19,7 @@
 #    /usr/bin/xmodmap $HOME/.Xmodmap
 #fi
 
-syndaemon -i 1 -K -d
+#syndaemon -i 1 -K -d
 
 # dwm
 exec dwm

@@ -2,7 +2,7 @@
 
 # basic
 sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg \
-openssh-server xsel xinit htop tree pinfo -y
+openssh-server xsel xinit htop tree pinfo feh -y
 
 # libs: TODO
 #libxft-dev
