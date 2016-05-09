@@ -22,6 +22,9 @@ cp -frv ~/Documents/config/dmenu/* ~/Documents/source/dmenu/
 cp -frv ~/Documents/config/tabbed/* ~/Documents/source/tabbed/
 cp -frv ~/Documents/config/st/* ~/Documents/source/st/
 
+# Get custom dwmstatus
+git clone https://github.com/ejans/dwmstatus
+
 # Get zpaq source
 git clone https://github.com/zpaq/zpaq
 cp -frv ~/Documents/config/zpaq/* ~/Documents/source/zpaq/
@@ -30,4 +33,5 @@ cp -frv ~/Documents/config/zpaq/* ~/Documents/source/zpaq/
 git clone https://github.com/KittyKatt/screenFetch screenfetch
 
 # Get colored-adb-logcat
-git clone https://github.com/haonan/colored-adb-logcat
+# TODO Unused
+#git clone https://github.com/haonan/colored-adb-logcat
