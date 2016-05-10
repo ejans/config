@@ -6,6 +6,8 @@ sudo apt-get build-dep dwm -y
 sudo apt-get install dunst -y
 # get libxrandr-dev for slock
 sudo apt-get install libxrandr-dev -y
+# get lightdm
+sudo apt-get install lightdm -y
 
 # get sources
 mkdir ~/Documents/source

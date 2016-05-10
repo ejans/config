@@ -2,15 +2,12 @@
 
 # basic
 sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg \
-openssh-server xsel xinit htop tree pinfo feh -y
-
-# libs: TODO
-#libxft-dev
-#libxrandr-dev
+openssh-server xsel xinit htop tree pinfo feh eog evince -y
 
 # media stuff
 #sudo apt-get install eog zathura evince rox-filer firefox geany \
-#flashplugin-installer mplayer unetbootin thunderbird keepassx youtube-dl -y
+#flashplugin-installer mplayer unetbootin iceweasel keepassx youtube-dl \
+#remmina -y
 
 # printer
 #sudo apt-get install cups -y
@@ -19,7 +16,7 @@ openssh-server xsel xinit htop tree pinfo feh -y
 #sudo apt-get install cmus cmus-plugin-ffmpeg -y
 
 #power
-#sudo apt-get install disper pm-utils -y
+#sudo apt-get install disper pm-utils powertop powerstat -y
 
 # laptop
 #sudo apt-get install wicd wicd-curses rfkill acpi -y
@@ -29,18 +26,25 @@ openssh-server xsel xinit htop tree pinfo feh -y
 #sudo apt-get install blueman -y
 # Camera
 #sudo apt-get install guvcview -y
+#sudo apt-get install xbacklight -y
+
+# gnucash
+#sudo apt-get install gnucash -y
 
 # programming0
 sudo apt-get install make cmake gcc g++ -y
 
 # programming1
 #sudo apt-get install mercurial cmake-curses-gui subversion mercurial ant \
-#rlwrap colormake colordiff ccze wkhtmltopdf gitk myrepos git-annex -y
+#rlwrap colormake colordiff ccze wkhtmltopdf gitk myrepos git-annex virtualbox -y
 
 # programming2 (latex)
-#sudo apt-get install virtualbox texlive texlive-latex3 \
-#texlive-latex-extra latex-beamer apache2 pandoc discount latexmk inkscape \
-#gimp pdfmod graphviz darktable -y
+#sudo apt-get install texlive texlive-latex3 \
+#texlive-latex-extra latex-beamer pandoc discount latexmk pdfmod graphviz dia -y
+
+# programming2.5 (graphics)
+#sudo apt-get install apache2 inkscape gimp darktable freecad kicad \
+#openscad -y
 
 # programming3 (avr)
 #sudo apt-get install avrdude avr-libc gcc-avr -y

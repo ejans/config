@@ -6,6 +6,10 @@ endif
 filetype off
 set nocompatible
 
+" Set syntax highlighting on
+syntax on
+
+
 " Vundle stuff
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()

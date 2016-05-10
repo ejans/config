@@ -1,0 +1,3 @@
+#!/bin/sh
+export LC_TIME="en_DK.utf8"
+/usr/bin/icedove $@
