@@ -4,3 +4,5 @@
 (dwmstatus)&
 # Set bg
 /home/evert/.fehbg
+# Set color profile
+# xcalib -d :0 /home/evert/.color/icc/ThinkPad_T450s_FHD_LP140WF3_SPD1.icm

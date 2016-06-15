@@ -47,10 +47,14 @@ echo '*/10 * * * * env DISPLAY=:0 '$HOME'/Documents/config/shortcuts/notify-batt
 
 # enable horizontal scrolling and more on touchpad
 sudo mkdir -v /etc/X11/xorg.conf.d
-#sudo cp -frv ~/Documents/config/files_to_copy/50-synaptics.conf /etc/X11/xorg.conf.d/
-sudo ln -sv ~/Documents/config/files_to_copy/50-synaptics.conf /etc/X11/xorg.conf.d
+sudo cp -frv ~/Documents/config/files_to_copy/50-synaptics.conf /etc/X11/xorg.conf.d/
+#sudo ln -sv ~/Documents/config/files_to_copy/50-synaptics.conf /etc/X11/xorg.conf.d
 
 # add dwm to xsessions (lightdm)
-sudo ln -sv  ~/Documents/config/files_to_copy/dwm.desktop /usr/share/xsessions/
-#sudo cp -frv ~/Documents/config/files_to_copy/dwm.desktop /usr/share/xsessions/
+#sudo ln -sv  ~/Documents/config/files_to_copy/dwm.desktop /usr/share/xsessions/
+sudo cp -frv ~/Documents/config/files_to_copy/dwm.desktop /usr/share/xsessions/
 #sudo cp -frv ~/Documents/config/files_to_copy/dwm.png /usr/share/xsessions/
+
+# set up fstrim (ssd)
+sudo cp /usr/share/doc/util-linux/examples/fstrim.{service,timer} /etc/systemd/system
+sudo systemctl enable fstrim.timer
