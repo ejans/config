@@ -44,6 +44,9 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
+" Make repeat command work on selection
+vnoremap . :normal .<CR>
+
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Mapping for odoo restart
