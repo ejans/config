@@ -60,3 +60,6 @@ sudo apt-get install make cmake gcc g++ -y
 
 # intel hd
 #sudo apt-get install intel-gpu-tools -y
+
+# intel microcode
+#sudo apt-get install intel-microcode
