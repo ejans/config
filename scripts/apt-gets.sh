@@ -2,12 +2,12 @@
 
 # basic
 sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg \
-openssh-server xsel xinit htop tree pinfo feh eog evince -y
+openssh-server xsel xinit xinput htop tree pinfo feh eog evince -y
 
 # media stuff
 #sudo apt-get install eog zathura evince rox-filer firefox geany \
-#flashplugin-installer mplayer unetbootin iceweasel keepassx youtube-dl \
-#remmina -y
+#flashplugin-installer mpv unetbootin iceweasel keepassx youtube-dl \
+#remmina mps-youtube -y
 
 # printer
 #sudo apt-get install cups -y
@@ -36,11 +36,12 @@ sudo apt-get install make cmake gcc g++ -y
 
 # programming1
 #sudo apt-get install mercurial cmake-curses-gui subversion mercurial ant \
-#rlwrap colormake colordiff ccze wkhtmltopdf gitk myrepos git-annex virtualbox -y
+#rlwrap colormake colordiff ccze wkhtmltopdf gitk myrepos git-annex virtualbox \
+#libxml2-utils -y
 
 # programming2 (latex)
 #sudo apt-get install texlive texlive-latex3 \
-#texlive-latex-extra latex-beamer pandoc discount latexmk pdfmod graphviz dia -y
+#texlive-latex-extra texlive-lang-european latex-beamer pandoc discount latexmk pdfmod graphviz dia -y
 
 # programming2.5 (graphics)
 #sudo apt-get install apache2 inkscape gimp darktable freecad kicad \
