@@ -7,7 +7,7 @@ openssh-server xsel xinit xinput htop tree pinfo feh eog evince -y
 # media stuff
 #sudo apt-get install eog zathura evince rox-filer firefox geany \
 #flashplugin-installer mpv unetbootin iceweasel keepassx youtube-dl \
-#remmina mps-youtube -y
+#mps-youtube -y
 
 # printer
 #sudo apt-get install cups -y
@@ -19,7 +19,7 @@ openssh-server xsel xinit xinput htop tree pinfo feh eog evince -y
 #sudo apt-get install disper pm-utils powertop powerstat -y
 
 # laptop
-#sudo apt-get install wicd wicd-curses rfkill acpi -y
+#sudo apt-get install network-manager rfkill acpi -y
 
 # T450s
 # Bluetooth
@@ -51,7 +51,7 @@ sudo apt-get install make cmake gcc g++ -y
 #sudo apt-get install avrdude avr-libc gcc-avr -y
 
 # network stuff
-#sudo apt-get install lftp rdesktop nmap openvpn nfs-common wireshark -y
+#sudo apt-get install lftp rdesktop nmap openvpn remmina nfs-common wireshark -y
 
 # zips
 #sudo apt-get install unzip pbzip2 file-roller -y
