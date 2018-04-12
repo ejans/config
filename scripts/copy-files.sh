@@ -15,14 +15,14 @@ ln -sv Documents/config/dotfiles/.bash_functions
 ln -sv Documents/config/dotfiles/.config/dunst
 ln -sv Documents/config/dotfiles/.gitconfig
 #ln -sv Documents/config/dotfiles/.mcabber
-ln -sv Documents/config/dotfiles/.mplayer
+#ln -sv Documents/config/dotfiles/.mplayer
 #ln -sv Documents/config/dotfiles/.profile
 ln -sv Documents/config/dotfiles/.vimrc
 #ln -sv Documents/config/dotfiles/.xinitrc
 ln -sv Documents/config/dotfiles/.xsessionrc
-ln -sv Documents/config/dotfiles/.asoundrc
+#ln -sv Documents/config/dotfiles/.asoundrc
 
-sudo ln -sv /home/evert/Documents/config/files_to_copy/icedove /usr/local/bin
+#sudo ln -sv /home/evert/Documents/config/files_to_copy/icedove /usr/local/bin
 
 # replace original failsafe to shorten boot time
 #sudo cp -frv /etc/init/failsafe.conf /etc/init/failsafe.conf.old
@@ -58,3 +58,8 @@ sudo cp -frv ~/Documents/config/files_to_copy/dwm.desktop /usr/share/xsessions/
 # set up fstrim (ssd)
 sudo cp /usr/share/doc/util-linux/examples/fstrim.{service,timer} /etc/systemd/system
 sudo systemctl enable fstrim.timer
+
+# setup 50% charge on battery
+sudo cp -frv ~/Documents/config/files_to_copy/smapi.conf /etc/modules-load.d/
+sudo cp -frv ~/Documents/config/files_to_copy/bat80.service /etc/systemd/system/
+sudo systemctl enable bat80.service

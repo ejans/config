@@ -1,0 +1,9 @@
+[Unit]
+Description=Set Battery to charge to 50 pct
+
+[Service]
+Type=forking
+ExecStart=/bin/echo 50 > /sys/devices/platform/smapi/BAT0/stop_charge_thresh
+
+[Install]
+WantedBy=multi-user.target

@@ -32,7 +32,7 @@ git clone https://github.com/zpaq/zpaq
 cp -frv ~/Documents/config/zpaq/* ~/Documents/source/zpaq/
 
 # Get screenfetch
-git clone https://github.com/KittyKatt/screenFetch screenfetch
+#git clone https://github.com/KittyKatt/screenFetch screenfetch
 
 # Get colored-adb-logcat
 # TODO Unused

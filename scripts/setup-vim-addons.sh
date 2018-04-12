@@ -12,8 +12,11 @@ case $REL in
 14.04)
     sudo apt-get install python-flake8 -y
     ;;
+9.4)
+    sudo apt-get install python-flake8 vim-python-jedi -y
+    ;;
 *)
-    echo "Not 12.04 or 14.04!!!"
+    echo "Not 12.04 or 14.04 or 9.4 !!!"
     ;;
 esac
 mkdir ~/.vim/bundle -p

@@ -2,7 +2,7 @@
 
 # basic
 sudo apt-get install alsa-tools alsa-utils conky vim xfonts-terminus* xorg \
-openssh-server xsel xinit xinput htop tree pinfo feh eog evince -y
+openssh-server xsel xinit xinput htop tree pinfo feh eog evince screenfetch -y
 
 # media stuff
 #sudo apt-get install eog zathura evince rox-filer firefox geany \
@@ -16,10 +16,10 @@ openssh-server xsel xinit xinput htop tree pinfo feh eog evince -y
 #sudo apt-get install cmus cmus-plugin-ffmpeg -y
 
 #power
-#sudo apt-get install disper pm-utils powertop powerstat -y
+sudo apt-get install disper pm-utils powertop powerstat -y
 
 # laptop
-#sudo apt-get install network-manager rfkill acpi -y
+sudo apt-get install network-manager rfkill acpi -y
 
 # T450s
 # Bluetooth
@@ -27,6 +27,9 @@ openssh-server xsel xinit xinput htop tree pinfo feh eog evince -y
 # Camera
 #sudo apt-get install guvcview -y
 #sudo apt-get install xbacklight -y
+
+# Lenovo
+sudo apt-get install tp-smapi-dkms -y
 
 # gnucash
 #sudo apt-get install gnucash -y
@@ -48,19 +51,19 @@ sudo apt-get install make cmake gcc g++ -y
 #openscad -y
 
 # programming3 (avr)
-#sudo apt-get install avrdude avr-libc gcc-avr -y
+sudo apt-get install avrdude avr-libc gcc-avr -y
 
 # network stuff
 #sudo apt-get install lftp rdesktop nmap openvpn remmina nfs-common wireshark -y
 
 # zips
-#sudo apt-get install unzip pbzip2 file-roller -y
+sudo apt-get install unzip pbzip2 file-roller -y
 
 # nvidia
 #sudo apt-get install nvidia-common nvidia-current nvidia-settings libvdpau1 -y
 
 # intel hd
-#sudo apt-get install intel-gpu-tools -y
+sudo apt-get install intel-gpu-tools -y
 
 # intel microcode
-#sudo apt-get install intel-microcode
+sudo apt-get install intel-microcode
