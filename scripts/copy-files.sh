@@ -40,6 +40,10 @@ sudo sed -i 'XKBVARIANT=/c\XKBVARIANT="intl-cust"' /etc/default/keyboard
 
 # remove suspend on lidswitch
 #echo 'HandleLidSwitch=ignore' | sudo tee -a /etc/systemd/logind.conf
+# activate suspend on lidswitch
+#echo 'HandleLidSwitch=suspend' | sudo tee -a /etc/systemd/logind.conf
+# activate suspend on lidswitch when external monitor present (FHDX220)
+#echo 'HandleLidSwitchDocked=suspend' | sudo tee -a /etc/systemd/logind.conf
 #sudo restart systemd-logind
 
 # add crontab to monitor battery
