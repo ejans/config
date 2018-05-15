@@ -22,7 +22,7 @@ ln -sv Documents/config/dotfiles/.vimrc
 ln -sv Documents/config/dotfiles/.xsessionrc
 #ln -sv Documents/config/dotfiles/.asoundrc
 
-#sudo ln -sv /home/evert/Documents/config/files_to_copy/icedove /usr/local/bin
+#sudo ln -sv /home/evert/Documents/config/files_to_copy/thunderbird /usr/local/bin
 
 # replace original failsafe to shorten boot time
 #sudo cp -frv /etc/init/failsafe.conf /etc/init/failsafe.conf.old
